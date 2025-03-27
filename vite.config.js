@@ -8,11 +8,15 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: "autoUpdate", // 자동 업데이트 설정
+      devOptions: {
+        enabled: true, // 개발 환경에서도 PWA 작동
+      },
       manifest: {
         name: "페스나우",
         short_name: "페스나우",
         description: "축제 기간 다른 사람과 얘기해보세요",
-        start_url: ".",
+        start_url: "/",
+        scope: "/",
         display: "standalone",
         background_color: "#ffffff",
         theme_color: "#000000",
